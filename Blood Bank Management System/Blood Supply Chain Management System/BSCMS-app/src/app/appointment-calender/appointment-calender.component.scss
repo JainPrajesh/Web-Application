@@ -1,0 +1,112 @@
+ul {
+    list-style-type: none;
+    height: 44px;
+    overflow: hidden;
+    position: fixed;
+    top: 128px;
+    background-color: #333;
+    width: 99%;
+    padding-left: 1px;
+  }
+  .header{
+    height: 13vh;
+    margin-top: -2px;
+    background-image: linear-gradient(to right, #ffb3b3, #9207078a), url(src/assets/homePage_header.png);
+    background-size: cover;
+    background-position: top;
+    position: fixed;
+    width: 99%;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #b30000;
+  }
+  /* header*/
+
+.logo {
+    height: 100px;
+    width: auto;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    
+}
+.example-card mat-card
+{
+    display: block;
+    margin-left: 21rem;
+    margin-right: 40rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    width:48%;
+    margin-right: 23rem;
+    margin-top: 12rem;
+    border: rgba(0,0,0,0.7);
+    margin-left: 25rem;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    display: block;
+    position: relative;
+    padding: 16px;
+    border-radius: 4px;
+    
+  }
+  
+  .heading--primary
+  {
+    font-size: 3rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    letter-spacing: 1rem;
+    margin-top: -8rem;
+    margin-left: 47rem;
+    }
+   
+    .heading--sub
+    {
+        font-weight: 600;
+        font-family: sans-serif;
+        font-size: 3rem;
+        margin-top: -1rem;
+        margin-left: 39rem;
+        margin-bottom: 2rem;
+    }
+    .heading--sub-sub
+    {
+        font-family: sans-serif;
+
+    }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  
+
+  .col-md-4{
+    margin-top: 17rem;
+    z-index: -2;
+  }

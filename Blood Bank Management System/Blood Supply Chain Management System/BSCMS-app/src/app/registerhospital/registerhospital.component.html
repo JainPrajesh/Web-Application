@@ -1,0 +1,52 @@
+<header class="header">
+  <span class="heading--primary">Red Cross</span><br>
+  <span class="heading--sub">Blood management System</span>
+ </header>
+<div class="example-container">
+  <span class="heading--register">Register Hospital</span><br><br><br>
+  <mat-form-field appearance="outline">
+    <mat-label>Hospital Name</mat-label>
+    <input matInput placeholder="Hospital Name" [(ngModel)]="hospitalName" required>
+  </mat-form-field>&nbsp; &nbsp; &nbsp;
+  <mat-form-field appearance="outline">
+    <mat-label>Registration Number</mat-label>
+    <input matInput placeholder="Hospital Registration Number" [(ngModel)]="hospitalRegistrationNumber" required>
+  </mat-form-field>&nbsp; &nbsp; &nbsp;
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Email" [(ngModel)]="hospitalEmailId" required>
+  </mat-form-field>&nbsp; &nbsp; &nbsp;
+  <mat-form-field appearance="outline">
+    <mat-label>Address</mat-label>
+    <input matInput placeholder="Street Address" [(ngModel)]="hospitalStreetAddress" required>
+  </mat-form-field>&nbsp; &nbsp; &nbsp;
+  <mat-form-field appearance="outline">
+    <mat-label>City</mat-label>
+    <input matInput placeholder="City" [(ngModel)]="hospitalCity" required>
+  </mat-form-field>&nbsp; &nbsp; &nbsp;
+  <mat-form-field appearance="outline">
+    <mat-label>State</mat-label>
+    <input matInput placeholder="State" [(ngModel)]="hospitalState" required>
+  </mat-form-field>&nbsp; &nbsp; &nbsp;
+  <mat-form-field appearance="outline">
+    <mat-label>Zip Code</mat-label>
+    <input matInput placeholder="Zip Code" [(ngModel)]="hospitalZipCode" required>
+  </mat-form-field>&nbsp; &nbsp; &nbsp;
+  <mat-form-field appearance="outline">
+    <mat-label>Contact Number</mat-label>
+    <input matInput placeholder="Placeholder" [(ngModel)]="hospitalContactNumber" required>
+  </mat-form-field>&nbsp; &nbsp; &nbsp;
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input matInput placeholder="Password" [(ngModel)]="hospitalPassword" required>
+  </mat-form-field>&nbsp; &nbsp; &nbsp;
+  <mat-form-field appearance="outline">
+    <mat-label>Confirm Password</mat-label>
+    <input matInput placeholder="Confirm Password" [(ngModel)]="confirmHospitalPassword" required>
+  </mat-form-field>
+  <div class="auth-error" *ngIf="error">Please fill all required details</div> <br>
+  <mat-card-actions>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<button class="btn-register"(click)="register()" >Register</button>
+    <button class="btn-register-logIn" [routerLink]="['/login']" routerLinkActive="router-link-active">Log In</button>
+  </mat-card-actions>
+</div>

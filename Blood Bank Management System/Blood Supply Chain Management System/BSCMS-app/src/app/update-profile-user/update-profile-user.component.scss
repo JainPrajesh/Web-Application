@@ -1,0 +1,427 @@
+ul {
+    list-style-type: none;
+    height: 44px;
+    overflow: hidden;
+    position: fixed;
+    margin-top: 0rem;
+    background-color: #333;
+    width: 99%;
+    padding-left: 1px;
+  }
+  .header{
+    height: 13vh;
+    margin-top: -18rem;
+    background-image: linear-gradient(to right, #ffb3b3, #9207078a), url(src/assets/homePage_header.png);
+    background-size: cover;
+    background-position: top;
+    position: fixed;
+    width: 99%;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #b30000;
+  }
+  /* header*/
+
+.logo {
+    height: 100px;
+    width: auto;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    
+}
+.example-card mat-card
+{
+    display: block;
+    margin-left: 21rem;
+    margin-right: 40rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    width:48%;
+    margin-right: 23rem;
+    margin-top: 12rem;
+    border: rgba(0,0,0,0.7);
+    margin-left: 25rem;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    display: block;
+    position: relative;
+    padding: 16px;
+    border-radius: 4px;
+    
+  }
+  
+  .heading--primary
+  {
+    font-size: 3rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    letter-spacing: 1rem;
+    margin-top: -8rem;
+    margin-left: 47rem;
+    }
+   
+    .heading--sub
+    {
+        font-weight: 600;
+        font-family: sans-serif;
+        font-size: 3rem;
+        margin-top: -1rem;
+        margin-left: 39rem;
+        margin-bottom: 2rem;
+    }
+    .heading--sub-sub
+    {
+        font-family: sans-serif;
+
+    }
+    
+    .nav-signup-user
+    {
+        font-weight: bold;
+        font-family: sans-serif;
+        padding-left: 18rem;
+        color: rgb(4, 108, 243);
+    }
+
+    .nav-signup-hospital
+    {
+        font-weight: bold;
+        font-family: sans-serif;
+        padding-left: 23rem;
+        color: rgb(4, 108, 243);
+    }
+    
+    .nav-forgotPassword
+    {   
+        padding-left: 23rem;
+        font-weight: bold;
+        font-family: sans-serif;
+        color: rgb(4, 108, 243);
+    }
+    .mat-raised-button.mat-primary
+    {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .login-alert
+    {
+    border-style: groove;
+    border-radius: 0.4rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.auth-error
+{
+    font-family: sans-serif;
+    color: red;
+    font-weight: 300;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.btn-register
+{
+    padding-right: 17rem;
+}
+.btn-register-logIn
+{
+    margin-top: -36px;
+    margin-left: 1rem;
+}
+
+/* User home page*/
+.updateProfile
+{
+    position: absolute;
+    
+    border: thin;
+    z-index: -1;
+    margin-left: 45rem;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-right: 5rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 11rem;
+}
+
+.demo{
+    border: solid;
+    width: 27%;
+    padding: 2rem;
+    margin-top: 18rem;
+    border-color: white;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 41rem;
+    z-index: -1;
+}
+
+#userHomePage
+{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.homePage{
+    position: relative;
+    top: 65px;
+}
+
+#userDetails
+{
+    margin: auto;
+    font-size: 20px;
+    text-align: left;
+    float: right;
+    margin-left: 15px;
+    margin-top: -3px;
+    
+}
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    float: right;
+    margin-top: 12px;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  #personalDetails
+  {
+      text-align: center;
+      font-family: sans-serif;
+      font-size: 30px;
+      font-weight: bold;
+  }
+/* User home page*/
+
+.example-card mat-card
+{
+    display: block;
+    margin-left: 21rem;
+    margin-right: 40rem;
+    /* align-items: center; */
+    text-align: center;
+    justify-content: center;
+}
+table {
+    width: 50%;
+    float: right;
+    margin-top: 218px;
+    margin-right: -40rem;
+  }
+#tablename
+{
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}  
+
+.table-header
+{
+    margin-right: 15rem;
+    margin-left: -19.5rem;
+    margin-top: 10.6rem;
+    width: 33.5%;
+    padding-left: 309px;
+    font-family: sans-serif;
+    font-size: 35px;
+    background-color: #B73336;
+    font-weight: bold;
+    border: solid;
+    color: white;
+    float: right;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.19);
+}
+.user-header{
+    margin-top: -3rem;
+    margin-bottom: 3rem;
+    padding-left: -46px;
+    margin-left: -35px;
+    width: 113%;
+    text-align:center; 
+    font-family: sans-serif;
+    font-size: 35px;
+    background-color: #B73336;
+    font-weight: bold;
+    border: solid;
+    color: white;
+    float: left;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.mat-header-cell
+{
+font-family: sans-serif;
+font-size: 18px;
+padding: -3px;
+font-weight:800;
+}
+
+#footer{
+    margin-bottom: 10px;
+}
+
+/*search donor page*/
+
+.mat-elevation-z8-table{
+    margin-top: 37px;
+    width: 65%;
+    margin-top: -35px;
+    margin-right: -600px;
+
+}
+.table-btn{
+    background-color: #595959;
+    border: none;
+    color: white;
+    padding: 6px 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px -33px;
+    border-radius: 8.4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.btn-saveProfile{
+    margin-top: 2rem;
+    margin-left: 56rem;
+    background-color: #3399ff;
+    border: none;
+    color: white;
+    padding: 13px 48px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8.4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+    
+.searchZipCode{
+    padding: 8px 9px;
+    border-color: white;
+    border: groove;
+    text-align: center;
+    border-radius: 4px;
+}
+.dropbtn {
+    padding: 8px 75px;
+    border-color: white;
+    color: gray;
+    border: groove;
+    text-align: center;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #dcdddc;
+  }
+
+  .searchDonorBar{
+    display: flex;
+    flex-direction: column;
+    width:53%;
+    margin-right: 23rem;
+    margin-top: 12rem;
+    border: rgba(0,0,0,0.7);
+    margin-left: -28px;
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+    position: relative;
+    padding: 16px;
+    border-radius: 4px;
+  }
+
+  .mapSearch{
+    border: solid;
+    padding: 6px 12px;
+    margin-top: 50px;
+    width: 45%;
+    padding-bottom: 500px;
+
+  }

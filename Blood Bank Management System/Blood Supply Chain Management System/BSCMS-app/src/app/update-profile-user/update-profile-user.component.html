@@ -1,0 +1,34 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<header class="header">
+    <div id="userInfo" hidden>{{jsonData}}</div>
+    <span class="heading--primary">Red Cross</span><br>
+    <span class="heading--sub">Blood management System</span>
+    <ul>
+      <li><a class="active" (click)="userHomePage()">Home</a></li>
+      <li><a><span class="navbar-links" (click)="searchBloodBankPage()">Search Blood Bank</span></a></li>
+      <li><a><span class="navbar-links" (click)="searchDonorPage()">Search Donor</span></a></li>
+      <li><a ><span class="navbar-links" (click)="updateProfilePage()">Update Profile</span></a></li>
+      <li><a><span class="navbar-links" (click)="viewAppointmentUser()">View Appointment</span></a></li>
+      <li><a><span class="navbar-links" [routerLink]="['/login']" routerLinkActive="router-link-active" >Logout</span></a></li>
+      </ul>
+   </header>
+
+
+<div class="demo">
+    <div class="user-header">Personal Details</div>
+  <p id="userHomePage">Full Name<input type="text" id="userDetails" name="fullName"  [(ngModel)]="name" contenteditable="true"></p> 
+  <p id="userHomePage">Email<input type="text" id="userDetails" name="Email" [(ngModel)]="emailId" value="" readonly ></p> 
+  <p id="userHomePage">Address<input type="text" id="userDetails" name="Address" [(ngModel)]="streetAddress" value="">
+     <p id="userHomePage">City<input type="text" id="userDetails" name="City" [(ngModel)]="city" value="">
+     <p id="userHomePage">State<input type="text" id="userDetails" name="State" [(ngModel)]="state" value="">
+     <p id="userHomePage">ZipCode<input type="text" id="userDetails" name="ZipCode" [(ngModel)]="zipCode" value="">
+  </p>
+  <p id="userHomePage">Gender<input type="text" id="userDetails" name="Gender" [(ngModel)]="gender" value=""></p>  
+  <p id="userHomePage">Date Of Birth<input type="text" id="userDetails" [(ngModel)]="dateofBirth" name="Date Of Birth" value="" readonly></p>  
+  <p id="userHomePage">Blood Group<input type="text" id="userDetails" [(ngModel)]="bloodGroup" name="Blood Group" value="" ></p>  
+  <p id="userHomePage">Contact No<input type="text" id="userDetails" [(ngModel)]="contactNumber" name="Contact No" value=""></p>  
+</div>
+
+<button type="button" class="btn-saveProfile" (click)="updateProfile()">Save</button>
+
+

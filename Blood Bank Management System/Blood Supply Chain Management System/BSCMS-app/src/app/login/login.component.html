@@ -1,0 +1,31 @@
+<header class="header">
+  <span class="heading--primary">RED CROSS</span><br>
+  <span class="heading--sub">BLOOD MANAGEMENT SYSTEM</span>
+ </header>
+ <div class="login-body">
+<div class="example-container">
+  <span class="heading--login">Login</span><br><br><br><br>
+      
+      <div  class="login-alert" *ngIf="invalidUser"> 
+        Error: Invalid Email or Password
+      </div> <br>
+      <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email" [(ngModel)]="username" name="username" required>
+        </mat-form-field> &nbsp; &nbsp; &nbsp;
+      <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
+      </mat-form-field> &nbsp; &nbsp; &nbsp;
+      <div class="auth-error" *ngIf="error">Enter Valid Email or Password</div>
+  <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+  <div class="footer-login"><br><br><br>
+  <span class="nav-forgotPassword" [routerLink]="['/forgotpassword']" routerLinkActive="router-link-active" >Forgot Password?</span><br>
+  <mat-card-actions>
+   <button mat-raised-button  (click)="login()" color="primary">Login</button>
+   </mat-card-actions>
+   <span class="nav-signup-user" [routerLink]="['/registeruser']" routerLinkActive="router-link-active" >Register User</span><br>
+   <span class="nav-signup-hospital" [routerLink]="['/registerhospital']" routerLinkActive="router-link-active" >Register Hospital</span>
+  </div>
+</div>
+</div>

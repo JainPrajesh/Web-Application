@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<header class="header">
+    <div id="userInfo" hidden>{{jsonData}}</div>
+    <span class="heading--primary">Red Cross</span><br>
+    <span class="heading--sub">Blood management System</span>
+    <ul>
+        <li><a class="active" (click)="userHomePage()">Home</a></li>
+        <li><a><span class="navbar-links" (click)="searchBloodBankPage()">Search Blood Bank</span></a></li>
+        <li><a><span class="navbar-links" (click)="searchDonorPage()">Search Donor</span></a></li>
+        <li><a ><span class="navbar-links" (click)="updateProfilePage()">Update Profile</span></a></li>
+        <li><a><span class="navbar-links" (click)="viewAppointmentUser()">View Appointment</span></a></li>
+        <li><a><span class="navbar-links" [routerLink]="['/login']" routerLinkActive="router-link-active" >Logout</span></a></li>
+    </ul>
+</header>
+<div class="table-head">
+    <span class="table-header">Appointment Details</span>
+</div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="donorname">
+        <th mat-header-cell *matHeaderCellDef>Donor Name</th>
+        <td mat-cell *matCellDef="let element"> {{element.senderUserName}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="donorEmailId">
+        <th mat-header-cell *matHeaderCellDef>Donor Email Id</th>
+        <td mat-cell *matCellDef="let element"> {{element.senderUserEmailId}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="donorBloodGroup">
+        <th mat-header-cell *matHeaderCellDef>Donor Blood Group</th>
+        <td mat-cell *matCellDef="let element"> {{element.senderUserBloodGroup}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="HospitalName">
+        <th mat-header-cell *matHeaderCellDef>Hospital Name</th>
+        <td mat-cell *matCellDef="let element"> {{element.hospitalName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="HospitalEmailID">
+        <th mat-header-cell *matHeaderCellDef>Hospital Email ID</th>
+        <td mat-cell *matCellDef="let element"> {{element.hospitalEmailId}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="ZipCode">
+        <th mat-header-cell *matHeaderCellDef>Zip Code</th>
+        <td mat-cell *matCellDef="let element"> {{element.hospitalZipCode}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="AppointmentStatus">
+        <th mat-header-cell *matHeaderCellDef>Appointment Status</th>
+        <td mat-cell *matCellDef="let element"> {{element.appointmentStatus}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="AppointmentDate">
+        <th mat-header-cell *matHeaderCellDef>Appointment Date</th>
+        <td mat-cell *matCellDef="let element"> {{element.appointmentDate}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="buttons">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element"><button class="table-btn" (click)="openDialog(element)">Schedule Appointment</button>
+            <button class="table-btn" (click)="cancelRequest(element)">Cancel Request</button></td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

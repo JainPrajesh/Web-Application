@@ -1,0 +1,67 @@
+<!--The content below is only a placeholder and can be replaced.-->
+    <header class="header">
+        <div id="userInfo" hidden>{{jsonData}}</div>
+        <div class="heading--primary">Red Cross</div><br>
+        <div class="heading--sub">Blood management System</div>
+        <ul>
+            <li><a class="active" (click)="userHomePage()">Home</a></li>
+            <li><a><span class="navbar-links" (click)="searchBloodBankPage()">Search Blood Bank</span></a></li>
+            <li><a><span class="navbar-links" (click)="searchDonorPage()">Search Donor</span></a></li>
+            <li><a ><span class="navbar-links" (click)="updateProfilePage()">Update Profile</span></a></li>
+            <li><a><span class="navbar-links" (click)="viewAppointmentUser()">View Appointment</span></a></li>
+            <li><a><span class="navbar-links" [routerLink]="['/login']" routerLinkActive="router-link-active" >Logout</span></a></li>
+        </ul>
+       </header>
+<div class="homePage">
+    <div class="userDetails">
+        <span class="user-header">Personal Details</span>
+      <p id="userHomePage">Full Name:<input type="text" id="userDetails" name="fullName" [(ngModel)]="name" value="" readonly></p> 
+      <p id="userHomePage">Email:<input type="text" id="userDetails" name="Email" [(ngModel)]="emailId" value="" readonly></p> 
+      <p id="userHomePage">Address:<input type="text" id="userDetails" name="Address" [(ngModel)]="streetAddress" value="" readonly>
+         <p id="userHomePage">City:<input type="text" id="userDetails" name="City" [(ngModel)]="city" value="" readonly>
+         <p id="userHomePage">State:<input type="text" id="userDetails" name="State" [(ngModel)]="state" value="" readonly>
+         <p id="userHomePage">ZipCode:<input type="text" id="userDetails" name="ZipCode" [(ngModel)]="zipCode" value="" readonly>
+      </p>
+      <p id="userHomePage">Gender:<input type="text" id="userDetails" name="Gender" [(ngModel)]="gender" value="" readonly></p>  
+      <p id="userHomePage">Date Of Birth:<input type="text" id="userDetails" [(ngModel)]="dateofBirth" name="Date Of Birth" value="" readonly></p>  
+      <p id="userHomePage">Blood Group:<input type="text" id="userDetails" [(ngModel)]="bloodGroup" name="Blood Group" value="" readonly></p>  
+      <p id="userHomePage">Contact No:<input type="text" id="userDetails" [(ngModel)]="contactNumber" name="Contact No" value="" readonly></p>  
+  </div>
+  <span class="table-header">User Connections</span>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="donorname">
+        <th mat-header-cell *matHeaderCellDef>Donor Name</th>
+        <td mat-cell *matCellDef="let element"> {{element.receiverUserName}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name</th>
+          <td mat-cell *matCellDef="let element"> {{element.senderUserName}} </td>
+        </ng-container>
+    
+      <!-- Weight Column -->
+      <ng-container matColumnDef="bloodGroup">
+        <th mat-header-cell *matHeaderCellDef> Blood Group </th>
+        <td mat-cell *matCellDef="let element"> {{element.receiverUserBloodGroup}} </td>
+      </ng-container>
+    
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> Connection Status </th>
+        <td mat-cell *matCellDef="let element"> {{element.status}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="buttons">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let element"> <button class="table-btn" (click)="approveConnection(element)" >Approve</button> 
+          <button class="table-btn" (click)="cancelRequest(element)">Cancel Request</button> 
+          <button class="table-btn">Contect User</button> </td>
+        </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div> 
+  <footer id="footer"></footer>
+    <router-outlet></router-outlet>
+    
